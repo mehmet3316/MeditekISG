@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="MeditekISG.Popuplar.ProgresBarPop">
+
+    <Frame  VerticalOptions="CenterAndExpand" CornerRadius="20" Margin="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Kayıtlar Aktarılıyor Lütfen Bekleyiniz" Grid.Row="0" FontSize="20"  TextColor="Black"/>
+            <ProgressBar WidthRequest="400" ProgressColor="Green" x:Name="progresbar" Grid.Row="1"/>
+            <Label x:Name="lblprogress" Grid.Row="2" FontSize="20" HorizontalOptions="EndAndExpand" />
+            
+        </Grid>
+    </Frame>
+</pages:PopupPage>

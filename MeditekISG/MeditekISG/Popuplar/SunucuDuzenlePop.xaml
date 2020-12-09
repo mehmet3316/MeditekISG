@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="MeditekISG.Popuplar.SunucuDuzenlePop">
+    <ScrollView>
+        <Frame CornerRadius="30" Margin="30" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="SQLLOGO.PNG" Grid.Row="0"/>
+                    <Grid Grid.Row="1" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Tanım" FontAttributes="Bold" TextColor="Black" Grid.Row="0" FontSize="Medium"/>
+                        <Entry x:Name="tbTanım"  Grid.Row="1"/>
+                    </Grid>
+                    <Grid Grid.Row="2" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Sunucu" FontAttributes="Bold" TextColor="Black" Grid.Row="0" FontSize="Medium"/>
+                        <Entry x:Name="tbSunucu"  Grid.Row="1"/>
+                    </Grid>
+                    <Grid Grid.Row="3" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Veritabanı" FontAttributes="Bold" TextColor="Black" Grid.Row="0" FontSize="Medium"/>
+                        <Entry x:Name="tbVeritabani" Grid.Row="1"/>
+                    </Grid>
+                    <Grid Grid.Row="4" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Kullanıcı Adı" FontAttributes="Bold" TextColor="Black" Grid.Row="0" FontSize="Medium"/>
+                        <Entry x:Name="tbKullaniciAdi" Grid.Row="1"/>
+                    </Grid>
+                    <Grid Grid.Row="5" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Parola" FontAttributes="Bold" TextColor="Black" Grid.Row="0" FontSize="Medium"/>
+                        <Entry x:Name="tbParola" Grid.Row="1" IsPassword="True"/>
+                    </Grid>
+                    <Button Text="Düzelt" Grid.Row="6" Clicked="Duzelt_Clicked" BorderRadius="20" BackgroundColor="Green" TextColor="White" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                    <Button Text="Kapat" Grid.Row="6" Clicked="PopKapa" Margin="5" BackgroundColor="red" TextColor="White" HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderRadius="20"/>
+                </Grid>
+
+
+
+            </Grid>
+        </Frame>
+    </ScrollView>
+    
+</pages:PopupPage>

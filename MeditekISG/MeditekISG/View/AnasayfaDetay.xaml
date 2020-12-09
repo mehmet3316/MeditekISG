@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.View.AnasayfaDetay"
+             BackgroundImageSource="arkaplan.PNG"
+             Title="Menü">
+
+                              <!--Anasayfa İçeriği Bu Kısımda Yer Almakda-->
+    
+    <Grid>
+        <!--Anasayfa Dikey 3 Parça Bölem İşlemi-->
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/> <!--Grid row 0-->
+            <RowDefinition Height="Auto"/>  <!--Grid row 1-->
+            <RowDefinition Height="Auto"/>  <!--Grid row 2-->
+            <RowDefinition Height="Auto"/>   <!--Grid row 3-->
+   
+            <!--Anasayfa Dikey 4 Parça Bölem İşlemi Bitiş-->
+        </Grid.RowDefinitions>
+     <!--Menu Başlığı-->
+        <Grid Grid.Row="0">
+            <Label Text="Anasayfa" HorizontalOptions="Center" Margin="5" FontAttributes="Bold" FontSize="30"/>
+        </Grid>
+        <!--Menu Başlığı Bitiş-->
+        <!--Bilgilendirme Box İşyeri Ve Çalışan-->
+       
+        <Frame Grid.Row="1" CornerRadius="20" Margin="20">           
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Seçilen İşyeri" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                <Label x:Name="lblisyerisecim" FontSize="15" Grid.Row="1"/>
+                <ImageButton Source="list32.PNG" BackgroundColor="Transparent" Clicked="IsyeriList_Clicked" Grid.Row="0" HorizontalOptions="End"/>
+            </Grid>
+        </Frame>
+
+        <!--Bilgilendirme Box İşyeri Ve Çalışan Bitiş-->
+        <!--Sunucu Aktarımları Durumu-->
+        <Grid Grid.Row="2">
+            <Frame Margin="20" CornerRadius="30" x:Name="guncellemealani">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="lblguncellemedurum"/>
+                    <Label Grid.Row="1" x:Name="lblguncellemedurumtar"/>
+                    <Button Grid.Row="0" x:Name="btnguncelleme" BackgroundColor="Green" Clicked="Güncelle" TextColor="White" BorderRadius="20" HorizontalOptions="EndAndExpand"/>
+                </Grid>
+            </Frame> 
+        </Grid>
+        <!--Sunucu Aktarımları Durumu Bitiş-->
+        <!--Sunucu Aktarımları Durumu-->
+        <Grid Grid.Row="3">
+            <Frame Margin="20" CornerRadius="30" x:Name="kutuphaneguncellemealanı">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Tehlike Konuları Kütüphanesi" Grid.Row="0"/>
+                    <Label x:Name="lblkutuphanesayı" Grid.Row="1" TextColor="OrangeRed"/>
+                    <Button Text="Güncelle" x:Name="btnTehlikeGuncelle" BackgroundColor="Green" Clicked="GüncelleTehlike" TextColor="White" BorderRadius="20"  HorizontalOptions="EndAndExpand"/>
+                </Grid>
+            </Frame>
+        </Grid>
+        <!--Sunucu Aktarımları Durumu Bitiş-->
+    </Grid>
+</ContentPage>

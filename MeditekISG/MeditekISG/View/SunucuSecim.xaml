@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.View.SunucuSecim"
+             Title="Sunucu Seçimi"
+             BackgroundImageSource="arkaplan.PNG">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Image Source="FirmaLogo.PNG" Grid.Row="2"/>
+        <Button Text="Yeni Veritabanı" BackgroundColor="MediumSeaGreen" TextColor="white" ImageSource="Arti16.PNG" Clicked="Yeni_Sunucu" Grid.Row="3" Margin="10" BorderRadius="20"  HorizontalOptions="StartAndExpand"/>
+
+        <ScrollView Grid.Row="4" Margin="5">
+            <ListView x:Name="SunucularListe"
+          HasUnevenRows="true" 
+                  Margin="10"
+                      ItemTapped="Sunucu_Sec"
+                      ItemsSource="{Binding .}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout >
+                                <Frame CornerRadius="20" Margin="10" >
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Text="{Binding TANIM}" TextColor="Black" Grid.Row="0" />
+                                        <Label Text="{Binding VERITABANI}" Grid.Row="1" />
+                                    </Grid>
+
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </Grid>
+</ContentPage>

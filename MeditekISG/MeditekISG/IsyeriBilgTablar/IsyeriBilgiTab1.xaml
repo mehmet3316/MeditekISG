@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.IsyeriBilgTablar.IsyeriBilgiTab1"
+             Title="İşyeri Bilgileri"
+             BackgroundImageSource="arkaplan.PNG">
+                                    <!--İşyeri Bilgileri Bu Kısımda Yer Almaktadır-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <Grid>
+                <!--Grid Row 1 Kendi İçinde Satırlara bölüyoruz-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <!--Grid Row 1 Kendi İçinde Satırlara bölüyoruz bitiş-->
+                <!--İşyeri Bilgileri Title-->
+                <Label Text="İşyeri Bilgileri" HorizontalOptions="Center" Grid.Row="0" Margin="10" FontAttributes="Bold" FontSize="Medium"/>
+                <!--İşyeri Bilgileri Title bitiş-->
+                
+                <!--İşyeri Uzun Adı-->
+                <Frame BorderColor="LightGray"  Grid.Row="1" CornerRadius="20" Margin="15">
+              
+                        <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="İşyeri Adı" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                        <Label  x:Name="lblUNVAN"  Grid.Row="1" FontSize="15"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <!--İşyeri Uzun Adı Bitiş-->
+
+                <!--İşyeri Kısa Adı-->
+                <Frame BorderColor="LightGray" Grid.Row="2" CornerRadius="20" Margin="15"> 
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="İşyeri Kısa Adı" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                        <Label  x:Name="lblKISAADI" FontSize="15" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <!--İşyeri Kısa Adı Bitiş-->
+
+                <!--Sorumlu Uzman-->
+                <Frame BorderColor="LightGray" Grid.Row="3" CornerRadius="20" Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Sorumlu İş Güvenliği Uzmanı" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                        <Label x:Name="lblUZMANBILG" FontSize="15" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <!--Sorumlu Uzman Bitiş-->
+
+                <!--Sorumlu Hekim-->
+                <Frame BorderColor="LightGray" Grid.Row="4" CornerRadius="20" Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Sorumlu İşyeri Hekimi" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        <Label x:Name="lblHEKIM" FontSize="15" Grid.Row="1"/>
+                    </Grid>
+                </Frame>
+                <!--Sorumlu Hekim bitiş-->
+
+                <!--İşyeri Nace Kod ve Tehlike Sınıfı-->
+                <Grid Grid.Row="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--İşyeri Nace-->
+                    <Frame BorderColor="LightGray" Grid.Row="0" Grid.Column="0" CornerRadius="20" Margin="15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Nace Kodu" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                            <Label  x:Name="lblNACEKOD" FontSize="15" Grid.Row="1"/>
+                            <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        </Grid>
+                    </Frame>
+                    <!--İşyeri Nace bitiş-->
+
+                    <!--İşyer Tehlike Sınıfı-->
+                    <Frame BorderColor="LightGray" Grid.Row="0" Grid.Column="1" CornerRadius="20" Margin="15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Tehlike Sınıfı" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                            <Label  x:Name="lblTEHLIKE" FontSize="15" Grid.Row="1"/>
+                            <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        </Grid>
+                    </Frame>
+                    <!--İşyer Tehlike Sınıfı bitiş-->
+                </Grid>
+                <!--İşyeri Nace Kod ve Tehlike Sınıfı bitiş-->
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.View.ZiyaretListDetay"
+             Title="İşyeri Ziyaretleri"
+             BackgroundImageSource="arkaplan.PNG">
+    <Grid>
+        <!--Sayfayı Dikeyde 3 e Bölüyorum Search Yeni Ekle Liste-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Sayfayı Dikeyde 3 e Bölüyorum Search Yeni Ekle Liste-->
+        <!--Search-->
+        <Grid Grid.Row="0" Margin="10">
+            <SearchBar      x:Name="ZiyaretArama"
+                Placeholder="Plan Ara..."
+                       CancelButtonColor="Gray"
+                       PlaceholderColor="Black"
+                       TextColor="Black"
+                       FontSize="Medium"
+                       FontAttributes="Italic"
+                       />
+        </Grid>
+        <!--Search Bitiş-->
+
+        <!--Yeni Plansız Ziyaret Ekle Buton-->
+        <Grid Grid.Row="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Button  Text="Yeni Plansız Ziyaret" HorizontalOptions="StartAndExpand" ImageSource="Arti16.PNG" Margin="5"  BorderRadius="20" BackgroundColor="MediumSeaGreen" TextColor="white"/>
+            </Grid>
+        </Grid>
+        <!--Yeni  Plansız Ziyaret Ekle Buton Bitiş-->
+
+        <!--Ziyaret Listeleri-->
+        <Grid Grid.Row="2" Margin="10">
+            <ScrollView>
+                <ListView x:Name="ZiyaretListesi"
+          HasUnevenRows="true" 
+                  Margin="10"
+                         ItemTapped="SecilenZiyaret"
+                      ItemsSource="{Binding .}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0"
+                           Text="{Binding DURUM}"
+                           FontAttributes="Bold" TextColor="Black" />
+
+                                    <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End"  TextColor="Black" 
+                           Text="{Binding SORUSAYISI}"
+                           FontAttributes="Bold" />
+                                    <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End"
+                           Text="{Binding GERCEKLESTIREN}" />
+                                  
+                                    <Label Grid.Row="1"
+                           Text="{Binding ALTTARIH}" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+        </Grid>
+        <!--Ziyaret Listeleri Bitiş-->
+    </Grid>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.View.OnlineOfline"
+             BackgroundImageSource="arkaplan.PNG"
+             Title="MEDITEKISG">
+                            <!--iL Açılan Ekranımız Ofline mı Bağlantı Online mi Bağlantı-->
+    
+    <Grid>
+        <!--Frame İçin Ekran Paylaştırma-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <!--Frame İçin Ekran Paylaştırma Bitiş-->
+        
+        <!--İçerikler-->
+        <Frame Grid.Row="1" CornerRadius="30" Margin="30">
+            <Grid>
+                <!--İçerikler Dikeyde Konumları-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <!--İçerikler Dikeyde Konumları Bitiş-->
+                
+                <!--Firma Logosu-->
+                <Image Grid.Row="1" Margin="20" Source="FirmaLogo.PNG"/>
+                <!--Firma Logosu Bitiş-->
+                
+                <!--Bilgilendirme-->
+                <Label Text="İnternete Bağlıysanız Online Butonuna Basınız !" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="2"/>
+                <!--Bilgilendirme Bitiş-->
+                
+                <!--Online Ofline Butonlar-->
+                <Grid Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--Online  Buton-->
+                    <Frame CornerRadius="20" Grid.Row="0" Grid.Column="0" BackgroundColor="Green">
+                        <Button Text="Online" Clicked="Online_Clicked" BackgroundColor="Transparent" BorderRadius="30"/>
+                    </Frame>
+                    <!--Online  Buton Bitiş-->
+
+                    <!--Ofline  Buton-->
+                    <Frame CornerRadius="20" Grid.Row="0" Grid.Column="1" BackgroundColor="DarkOrange">
+                        <Button Text="Offline" Clicked="Ofline_Clicked" BackgroundColor="Transparent" BorderRadius="30"/>
+                    </Frame>
+                    <!--Ofline  Buton Bitiş-->
+                </Grid>
+                <!--Online Ofline Butonlar -->
+                
+                <!--Destel Butonu-->
+                <Button Text="Destek Hattı" TextColor="red" BackgroundColor="WhiteSmoke" Grid.Row="4" HorizontalOptions="CenterAndExpand" FontSize="Micro" BorderRadius="20" ImageSource="Tel32.PNG"/>
+                <!--Destel Butonu Bitiş-->
+            </Grid>
+        </Frame>
+        <!--İçerikler Bitiş-->
+    </Grid>
+</ContentPage>

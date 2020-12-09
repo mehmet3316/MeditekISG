@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.CalisanBilgTablar.CalisanBilgTab1"
+             Title="Kimlik Bilgileri"
+             BackgroundImageSource="arkaplan.PNG">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Label Text="Çalışan Kimlik Bilgileri" HorizontalOptions="Center" Grid.Row="0" Margin="10" FontAttributes="Bold" FontSize="Medium"/>
+                <Frame BorderColor="LightGray" Grid.Row="1" Margin="5" CornerRadius="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="TC KİMLİK" Margin="5" Grid.Row="0" FontAttributes="bold" TextColor="Black"/>
+                        <Label x:Name="lblTCKIMLIKNO" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0" Clicked="TC_Clicked"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="LightGray" Grid.Row="2" Margin="5" CornerRadius="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Adı" Margin="5" Grid.Row="0" FontAttributes="bold" TextColor="Black"/>
+                        <Label x:Name="lblADI" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0" Clicked="AD_Clicked"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="LightGray" Grid.Row="3" Margin="5" CornerRadius="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Soyadı" Margin="5" Grid.Row="0" FontAttributes="bold" TextColor="Black"/>
+                        <Label x:Name="lblSOYADI" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0" Clicked="SOYAD_Clicked"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="LightGray" Grid.Row="4" Margin="5" CornerRadius="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Doğum Tarihi" Margin="5" Grid.Row="0" FontAttributes="bold" TextColor="Black"/>
+                        <Label x:Name="lblDOGUMTARIHI" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0" Clicked="DOGUMTARIHI_Clicked"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="LightGray" Grid.Row="5" Margin="5" CornerRadius="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Cinsiyet" Margin="5" Grid.Row="0" FontAttributes="bold" TextColor="Black"/>
+                        <Label x:Name="lblCINSIYETI" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0" Clicked="CINSIYET_Clicked"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <Frame BorderColor="LightGray" Grid.Row="6" Margin="5" CornerRadius="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Tel No" Margin="5" Grid.Row="0" FontAttributes="bold" TextColor="Black"/>
+                        <Label x:Name="lblTELEFON" Grid.Row="1"/>
+
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0" Clicked="TELNO_Clicked"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        <ImageButton Source="Tel32.PNG" Grid.Row="0"  HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

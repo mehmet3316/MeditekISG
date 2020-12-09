@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.View.Master"
+             Title="Master"
+             BackgroundColor="WhiteSmoke">
+    <Grid RowSpacing="0">
+        <!---Ekran Boyutlandırma Satır Olarak Ekranı Bölme-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!---Ekran Boyutlandırma Satır Olarak Ekranı Bölme Bitiş-->
+        <!---Hamburger menu içerik-->
+        <!--Kullanıcı Bilgileri Ad Soyad Resim-->
+        <Frame Grid.Row="0" BorderColor="LightGray">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Source="Kullanici50.PNG" Grid.Row="0"/>
+                <Label Grid.Row="1" x:Name="lblgorev" Text="İş Güv. Uzmanı" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Grid.Row="2" x:Name="lbladsoyad"  Text="İncilay Atak" HorizontalOptions="Center" />
+            </Grid>
+        </Frame>
+
+        <!--Kullanıcı Bilgileri Ad Soyad Resim Bitiş-->
+        <!--Menü Yonlendirme Butonları-->
+        <ScrollView Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Text="Anasayfa" Clicked="Anasayfa_Clicked" Grid.Row="0" BackgroundColor="white" Padding="20" ImageSource="Anasayfa32.PNG" />
+                <Button Text="İşyeri Listesi" Clicked="IsyeriList_Clicked" Grid.Row="1"  BackgroundColor="white" Padding="20" ImageSource="list32.PNG" />
+                <Button Text="İşyeri Bilgileri" Clicked="IsyeriBilg_Clicked" Grid.Row="2"  BackgroundColor="white" Padding="20"   ImageSource="info32.PNG"/>
+                <Button Text="Çalışan Listesi" Clicked="CalisanList_Clicked" Grid.Row="3" BackgroundColor="white" Padding="20"   ImageSource="users32.PNG"/>
+                <Button Text="İşyeri Ziyaretleri" Clicked="Ziyaret_Clicked"  Grid.Row="4" BackgroundColor="white" Padding="20"   ImageSource="date32.PNG"/>
+                <Button Text="Çıkış Yap" Clicked="Cikis_Clicked" Grid.Row="5" BackgroundColor="white" Padding="20"  ImageSource="Cikis32.PNG"/>
+            </Grid>
+        </ScrollView>
+        <!--Menü Yonlendirme Butonları Bitiş-->
+        <!--Destek Hattı-->
+        <Frame Grid.Row="2" BorderColor="LightGray" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Text="Destek Hattı" FontSize="Micro" ImageSource="Tel16.Png" BorderRadius="20"  TextColor="red" BackgroundColor="WhiteSmoke" HorizontalOptions="Center"/>
+
+            </Grid>
+
+        </Frame>
+        <!--Destek Hattı Bitiş-->
+        <!---Hamburger menu içerik Bitiş-->
+    </Grid>
+</ContentPage>

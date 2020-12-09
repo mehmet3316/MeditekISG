@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="MeditekISG.Popuplar.AnasafyaOflinePop">
+    <ScrollView>
+        <Frame CornerRadius="30" VerticalOptions="CenterAndExpand" Margin="30">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Label Text="Ofline Aktarımları" Margin="10" TextColor="Black" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+                </Grid>
+                <!--İşyeri Aktarım-->
+                <Grid Grid.Row="1" >
+                    <Frame CornerRadius="30" BackgroundColor="#17a2b8">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Grid.Column="0">
+                                <Label Text="İşyeri Aktarımları :" Margin="5" FontAttributes="Bold" FontSize="15"/>
+                            </Grid>                         
+                          
+                                <Button Text="Aktar" HorizontalOptions="EndAndExpand" Margin="5" BorderRadius="15" BackgroundColor="#28a745"/>
+                           
+                        </Grid>
+                    </Frame>
+
+                </Grid>
+                <!--İşyeri Aktarım Bitiş-->
+                <!--Çalışan Aktarım -->
+                <Grid Grid.Row="2">
+                    <Frame CornerRadius="30" BackgroundColor="#17a2b8">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Grid.Column="0">
+                                <Label Text="Çalışan Aktarımları :" Margin="5" FontAttributes="Bold" FontSize="15"/>
+                            </Grid>
+
+                            <Button Text="Aktar" HorizontalOptions="EndAndExpand" Margin="5" BorderRadius="15" BackgroundColor="#28a745"/>
+
+                        </Grid>
+                    </Frame>
+
+                </Grid>
+                <!--Çalışan Aktarım Bitiş-->
+                <!--Ziyater Aktarım -->
+                <Grid Grid.Row="3">
+                    <Frame CornerRadius="30" BackgroundColor="#17a2b8">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Grid.Column="0">
+                                <Label Text="Ziyaret Aktarımları :" Margin="5" FontAttributes="Bold" FontSize="15"/>
+                            </Grid>
+
+                            <Button Text="Aktar" HorizontalOptions="EndAndExpand" Margin="5" BorderRadius="15" BackgroundColor="#28a745"/>
+
+                        </Grid>
+                   </Frame>
+                </Grid>
+                <!--Ziyater Aktarım Bitiş-->
+
+                <Button Text="Kapat" Clicked="PopKapa" Margin="5" BackgroundColor="red" TextColor="White" Grid.Row="4" HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderRadius="20"/>
+            </Grid>
+        </Frame>
+    
+    </ScrollView>
+</pages:PopupPage>

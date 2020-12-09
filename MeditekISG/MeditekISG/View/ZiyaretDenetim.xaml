@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.View.ZiyaretDenetim"
+             Title="Denetim"
+             BackgroundImageSource="arkaplan.PNG">
+    <Grid>
+        <!--Sayfayı Dikeyde 3 e Bölüyorum Search Yeni Ekle Liste-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Sayfayı Dikeyde 3 e Bölüyorum Search Yeni Ekle Liste-->
+        <!--Search-->
+        <Grid Grid.Row="0" Margin="10">
+            <SearchBar     x:Name="KONUARAMA"
+                Placeholder="Konu Ara..."
+                       CancelButtonColor="Gray"
+                       PlaceholderColor="Black"
+                       TextColor="Black"
+                       FontSize="Medium"
+                       FontAttributes="Italic"
+                             TextChanged="KONUARAMA_TextChanged"
+                       />
+        </Grid>
+        <!--Search Bitiş-->
+
+        <!--Konu Ekle Ekle Buton-->
+        <Grid Grid.Row="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Button  Text="Konu Ekle" Clicked="KONUEKLE" ImageSource="Arti16.PNG" HorizontalOptions="StartAndExpand" Margin="5"  BorderRadius="20" BackgroundColor="MediumSeaGreen" TextColor="white"/>
+            </Grid>
+        </Grid>
+        <!--Konu Ekle Ekle Buton Bitiş-->
+
+        <!--Konu Listeleri-->
+        <Grid Grid.Row="2" Margin="10">
+            <ScrollView>
+                <ListView x:Name="ZiyaretKonulariList"
+          HasUnevenRows="true" 
+                  Margin="10"                        
+                      ItemsSource="{Binding .}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding SIRA}"
+                           FontAttributes="Bold" HorizontalOptions="StartAndExpand" TextColor="Black" />
+
+                                    <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="{Binding KONU}" FontAttributes="Bold" />
+                           
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+        </Grid>
+        <!--Konu Listeleri Bitiş-->
+    </Grid>
+</ContentPage>

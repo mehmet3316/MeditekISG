@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.View.ZiyaretIcerikDetay"
+             BackgroundImageSource="arkaplan.PNG">
+
+   
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+              <RowDefinition Height="Auto"/>
+              
+            </Grid.RowDefinitions>
+            <Label x:Name="lblDURUM" FontSize="30" FontAttributes="Bold" Grid.Row="0" Margin="10" HorizontalOptions="CenterAndExpand"/>
+        <ScrollView Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0"  CornerRadius="20" Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Kayıt Sahibi" TextColor="Black" Grid.Row="0"/>
+                        <Label x:Name="lblKAYITSAHIBI" Grid.Row="1"/>
+                    </Grid>
+                </Frame>
+                <Grid Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Frame Grid.Row="0" Grid.Column="0" CornerRadius="20" Margin="10">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Text="Tarih" TextColor="Black"/>
+                                <Label Grid.Row="1" x:Name="lblTARIH" />
+                            </Grid>
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="20" Margin="10">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Text="Saat" TextColor="Black"/>
+                                <Label Grid.Row="1" x:Name="lblSAAT" />
+                            </Grid>
+                        </Frame>
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>                      
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="20" Margin="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Soru Sayısı" Grid.Row="0" TextColor="Black"/>
+                            <Label x:Name="lblSORUSAYI" Grid.Row="1"/>
+                           
+                        </Grid>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="20"  Margin="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Uygun Konu " Grid.Row="0" TextColor="Black"/>
+                            <Label x:Name="lblUYGUNKONU" Grid.Row="1"/>
+                        </Grid>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="2" CornerRadius="20"  Margin="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Uygunsuzluk Sayısı" Grid.Row="0" TextColor="Black"/>
+                            <Label x:Name="lblUYGUNOLMAYANKONU" Grid.Row="1"/>
+                        </Grid>
+                    </Frame>
+
+                </Grid>
+                <Frame Grid.Row="3" CornerRadius="20" Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Notlar" TextColor="Black"/>
+                        <Label Grid.Row="1" x:Name="lblNOTLAR" />
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+        <Button Text="Denetime Başla" Clicked="DenetimBasla" Margin="20" Grid.Row="2" TextColor="Black" BackgroundColor="LightBlue" BorderRadius="20" HorizontalOptions="CenterAndExpand"/>
+        <Button Text="Kaydet" Margin="20" Grid.Row="2" TextColor="White" BackgroundColor="Green" BorderRadius="20" HorizontalOptions="StartAndExpand"/>
+        <Button Text="Sil" Margin="20" Grid.Row="2" TextColor="White" BackgroundColor="Red" BorderRadius="20" HorizontalOptions="EndAndExpand" ImageSource="Silme.PNG"/>
+    </Grid>
+   
+</ContentPage>

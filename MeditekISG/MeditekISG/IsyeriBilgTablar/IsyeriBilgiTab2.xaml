@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditekISG.IsyeriBilgTablar.IsyeriBilgiTab2"
+             Title="İşyeri İletişim Bilgileri"
+             BackgroundImageSource="arkaplan.PNG">
+                  <!--Bu ekran işyeri  bilgi bölümünün tab2 yani işyeri iletişim bilgileri kısmıdır-->
+    <Grid>
+        <!--Ekran Dikeyde 2 bölüme bölme üst kısım margin 10 kadar boşluk-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Ekran Dikeyde 2 bölüme bölme üst kısım margin 10 kadar boşluk bitiş-->
+        
+        <!--İçerik Ekranı SCROLVİEW ile tasarlanmıştır-->
+        <ScrollView Grid.Row="1">
+            <Grid>
+                <!--2 bölümü tekrar kenid içerisinde dikeyde 5 bölüme bölünmüştür-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <!--Ekran dikeyde 6 bölüme bölünmüştür bitiş-->
+
+                <!--İşyeri iletişim Bilgileri Title-->
+                <Label Text="İşyeri İletişim Bilgileri" HorizontalOptions="Center" Grid.Row="0" Margin="10" FontAttributes="Bold" FontSize="Medium"/>
+                <!--İşyeri iletişim Bilgileri Title Bitiş-->
+                
+                <!--İşyeri İL İLÇE-->
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Frame BorderColor="LightGray" Grid.Row="0" Grid.Column="0" CornerRadius="20" Margin="15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="İL" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                            <Label x:Name="lblIL" FontSize="15" Grid.Row="1"/>
+                            <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        </Grid>
+                    </Frame>
+                    <Frame BorderColor="LightGray" Grid.Row="0" Grid.Column="1" CornerRadius="20" Margin="15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="İlçe" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                            <Label x:Name="lblILCE" FontSize="15" Grid.Row="1"/>
+                            <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <!--İL İLÇE Bitiş-->
+                
+                <!--Adres-->
+                <Frame BorderColor="LightGray" Grid.Row="2" CornerRadius="20" Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Açık Adres" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                        <Label x:Name="lblADRES" FontSize="15" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <!--İşyeri Adres Bitiş-->
+                
+                <!--İşyeri Email-->
+                <Frame BorderColor="LightGray" Grid.Row="3" CornerRadius="20" Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Email" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                        <Label x:Name="lblMAIL" FontSize="15" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        <ImageButton Source="Mail32.PNG" Grid.Row="0"  HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <!--İşyeri Email Bitiş-->
+
+                <!--İşyeri Tel No-->
+                <Frame BorderColor="LightGray" Grid.Row="4" CornerRadius="20" Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Telefon Numarası" Margin="5" Grid.Row="0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                        <Label x:Name="lblTELNO" FontSize="15" Grid.Row="1"/>
+                        <ImageButton Source="Kalem32.PNG" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" BackgroundColor="Transparent"  />
+                        <ImageButton Source="Tel32.PNG" Grid.Row="0"  HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"  />
+                    </Grid>
+                </Frame>
+                <!--İşyeri Tel No Bitiş-->
+
+
+            </Grid>
+        </ScrollView>
+        <!--İçerik Ekranı SCROLVİEW ile tasarlanmıştır bitiş-->
+    </Grid>
+</ContentPage>
